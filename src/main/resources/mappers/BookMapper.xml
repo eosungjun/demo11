@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace : mapper Interface 의 풀경로(패키지명 + 인터페이스명)
+    xml : 태그의 집합 - 시작태그와 끝태그를 일치
+-->
+<mapper namespace="com.example.demo11.mapper.BookMapper">
+
+    <!-- selectBookList 
+    resultType의 패키지 경로는 설정파일(application.property) 파일을 참고--> 
+    <select id="selectBookList" resultType="BookDto">
+        select * from tb_book order by b_no desc
+    </select>  
+
+    <!-- selectTime --> 
+
+    <select id="selectTime">
+
+        select sysdate from dual 
+
+    </select>
+
+    <select id="selectBook" resultType="BookDto">
+        select * from tb_book where b_no=#{b_no}
+    </select>
+
+  
+
+</mapper>
