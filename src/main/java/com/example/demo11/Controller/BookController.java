@@ -64,7 +64,7 @@ public class BookController {
         }else{
             model.addAttribute("msg", "삭제 중 예외가 발생 하였습니다.\n 관리자에게 문의해주세요");
         }
-
+        
         // model 객체에 저장된 msg를 출력하고 화면을 전환 
         // 뒤로가기 또는 url로 이동 
         return "common/msg";

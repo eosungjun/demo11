@@ -17,8 +17,8 @@ public class MemberController {
 
     //로그인 페이지로 이동 
     @GetMapping("/login")
-    public void getMethodName() {
-        
+    public String getMethodName() {
+        return "/login";
     }
     
     //로그인 처리
